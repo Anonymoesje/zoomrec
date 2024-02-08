@@ -7,7 +7,7 @@ xset s noblank &
 xset s 0 0 &
 xset s off &
 
-# Start xfce
+# Start xfce4
 /usr/bin/startxfce4 --replace > "$HOME"/xfce.log &
 sleep 1
 cat "$HOME"/xfce.log
