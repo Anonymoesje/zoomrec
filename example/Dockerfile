@@ -1,4 +1,4 @@
-FROM kastldratza/zoomrec:latest
+FROM anonymoesje/zoomrec:latest
 
 ADD meetings.csv ${HOME}/
 
