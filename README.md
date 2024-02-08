@@ -82,11 +82,11 @@ CSV must be formatted as in example/meetings.csv
 - "**description**" is used for filename when recording
 - "**duration**" in minutes (+5 minutes to the end)
 
-weekday | time | duration | id | password | description | record
--------- | -------- | -------- | -------- | -------- | -------- | --------
-monday | 09:55 | 60 | 111111111111 | 741699 | Important_Meeting | true
-monday | 14:00 | 90 | 222222222222 | 321523 | Unimportant_Meeting | false
-tuesday| 17:00 | 90 | https://zoom.us/j/123456789?pwd=abc || Meeting_with_URL | true
+| weekday | time  | duration | id                                  | password | description         | record |
+|---------|-------|----------|-------------------------------------|----------|---------------------|--------|
+| monday  | 09:55 | 60       | 111111111111                        | 741699   | Important_Meeting   | true   |
+| monday  | 14:00 | 90       | 222222222222                        | 321523   | Unimportant_Meeting | false  |
+| tuesday | 17:00 | 90       | https://zoom.us/j/123456789?pwd=abc | -        | Meeting_with_URL    | true   |
 
 ### VNC
 
