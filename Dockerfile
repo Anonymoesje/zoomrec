@@ -64,6 +64,7 @@ RUN apt-get update && \
 # Install Zoom dependencies
     apt-get install --no-install-recommends -y \
         libxcb-xinerama0 \
+        libgstreamer-plugins-base0.10-0 \
         libglib2.0-0 \
         libxcb-shape0 \
         libxcb-shm0 \
@@ -81,7 +82,8 @@ RUN apt-get update && \
         libxslt1.1 \
         libsqlite3-0 \
         libxcb-keysyms1 \
-        libxcb-xtest0 && \
+        libxcb-xtest0 \
+        ibus && \
 # Install Zoom
     wget --no-check-certificate -q -O zoom_amd64.deb https://cdn.zoom.us/prod/5.15.12.7665/zoom_amd64.deb && \
     dpkg -i zoom_amd64.deb && \
