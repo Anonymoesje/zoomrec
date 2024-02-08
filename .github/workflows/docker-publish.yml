@@ -37,11 +37,14 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Lowercase repo
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> ${GITHUB_ENV}
       - name: Build and push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ github.repository }}:latest
+          tags: ${{ REPO }}:latest
           #tags: ${{ github.repository }}:${{ env.BRANCH }}
       - name: Extract metadata (tags, labels) for Docker
         id: meta
